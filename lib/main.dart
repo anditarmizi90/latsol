@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latsol/view/login_page.dart';
+import 'package:latsol/view/main_page.dart';
 import 'package:latsol/view/register_page.dart';
 import 'package:latsol/view/splash_screen.dart';
 
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => const SplashScreen(),
         LoginPage.route: (context) => const LoginPage(),
         RegisterPage.route: (context) => const RegisterPage(),
+        MainPage.route: (context) => const MainPage(),
       },
     );
   }
