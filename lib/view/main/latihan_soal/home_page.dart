@@ -19,8 +19,10 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 70.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20.0,
+              vertical: 70.0,
+            ),
             child: Row(
               children: [
                 Expanded(
@@ -30,9 +32,16 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         "Hei Nama User",
                         style: GoogleFonts.poppins().copyWith(
-                            fontSize: 12, fontWeight: FontWeight.w700),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
-                      Text("Selamat Datang"),
+                      Text(
+                        "Selamat Datang",
+                        style: GoogleFonts.poppins().copyWith(
+                          fontSize: 12,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -45,14 +54,44 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.symmetric(
+            margin: const EdgeInsets.symmetric(
               horizontal: 20.0,
-              vertical: 15,
+              // vertical: 15,
             ),
-            height: 150,
+            decoration: BoxDecoration(
+              color: R.colors.primary,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            height: 147,
             width: double.infinity,
-            child: Stack(children: []),
-          )
+            child: Stack(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20.0,
+                    vertical: 15,
+                  ),
+                  child: Text(
+                    "Mau Kerjakan Latihan Soal Apa Hari ini?",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child: Image.asset(
+                    R.assets.imgHome,
+                    width: MediaQuery.of(context).size.width * 0.45,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
