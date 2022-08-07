@@ -32,16 +32,26 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          "Silahkan Isi Data Diri Anda!",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-            color: Colors.black,
+      backgroundColor: Color(0xfff0f3f5),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight + 20),
+        child: AppBar(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25),
+            ),
+          ),
+          elevation: 0,
+          backgroundColor: Colors.white,
+          iconTheme: const IconThemeData(color: Colors.black),
+          title: const Text(
+            "Silahkan Isi Data Diri Anda!",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+            ),
           ),
         ),
       ),
@@ -74,14 +84,20 @@ class _RegisterPageState extends State<RegisterPage> {
                 title: 'Email',
                 hintText: 'contoh@example.com',
               ),
+              SizedBox(
+                height: 15,
+              ),
               RegisterTextField(
                 title: 'Nama Lengkap',
                 hintText: 'Nama Lengkap Anda',
               ),
+              SizedBox(
+                height: 15,
+              ),
               Text(
                 "Jenis Kelamin",
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 17,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -161,17 +177,17 @@ class _RegisterPageState extends State<RegisterPage> {
                 ],
               ),
               SizedBox(
-                height: 5,
+                height: 15,
               ),
               Text(
                 "Kelas",
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 17,
                   fontWeight: FontWeight.w600,
                 ),
               ),
               SizedBox(
-                height: 5,
+                height: 15,
               ),
               Container(
                 width: double.infinity,
@@ -201,7 +217,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               SizedBox(
-                height: 5,
+                height: 15,
               ),
               RegisterTextField(
                 title: 'Nama Sekolah',

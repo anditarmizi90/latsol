@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:latsol/constants/r.dart';
 import 'package:latsol/view/register_page.dart';
 
@@ -14,9 +15,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: R.colors.grey,
+      backgroundColor: Color(0xfff3f7f8),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(12, 100, 12, 12),
+        padding: const EdgeInsets.all(25.0),
         child: Column(
           children: [
             Align(
@@ -24,8 +25,9 @@ class _LoginPageState extends State<LoginPage> {
               child: Text(
                 R.strings.login,
                 style: const TextStyle(
+                  height: 4,
                   fontSize: 20,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
             ),
@@ -46,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
             Text(
               R.strings.loginDescription,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.poppins().copyWith(
                 fontWeight: FontWeight.w500,
                 fontSize: 14,
                 color: R.colors.greySubtitle,
@@ -69,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     R.strings.loginWithGoogle,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: R.colors.blackLogin,
                     ),
@@ -91,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     R.strings.loginWithApple,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
                     ),
