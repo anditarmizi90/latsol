@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
               onTap: () {
                 Navigator.of(context).pushNamed(RegisterPage.route);
               },
-              backgroundColor: Colors.white,
+              backgroundColor: Colors.blueGrey,
               borderColor: R.colors.primary,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
