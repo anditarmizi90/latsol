@@ -55,8 +55,8 @@ class DefaultFirebaseOptions {
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyB0dbcaYG5Z8xZVtgNsp57hpajIHqIvfvs',
     appId: '1:895332405356:android:7833d04f7ab8a5569a4849',
-    messagingSenderId: '895332405356',
-    projectId: 'tugas-edspert',
-    storageBucket: 'tugas-edspert.appspot.com',
+    messagingSenderId: '1084383208492',
+    projectId: 'latsol-985d0',
+    storageBucket: 'latsol.matdev90.com',
   );
 }
