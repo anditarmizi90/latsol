@@ -1,4 +1,4 @@
-import 'package:latsol/constants/R/ap_colors.dart';
+import 'package:latsol/constants/R/app_colors.dart';
 import 'package:latsol/constants/R/assets.dart';
 import 'package:latsol/constants/R/strings.dart';
 

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1084383208492",
+    "project_id": "latsol-985d0",
+    "storage_bucket": "latsol-985d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084383208492:android:945f02ea47647618ff5d89",
+        "android_client_info": {
+          "package_name": "com.matdev90.latsol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084383208492-31cim98s9epa6f0o88fu7cf113c5m3ef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0dbcaYG5Z8xZVtgNsp57hpajIHqIvfvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084383208492-31cim98s9epa6f0o88fu7cf113c5m3ef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:latsol/constants/r.dart';
-import 'package:latsol/view/main/discussion/chart_page.dart';
+import 'package:latsol/view/main/discussion/chat_page.dart';
 import 'package:latsol/view/main/latihan_soal/home_page.dart';
-import 'package:latsol/view/main/profil/profil_page.dart';
+import 'package:latsol/view/main/profile/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -35,8 +35,9 @@ class _MainPageState extends State<MainPage> {
         controller: _pc,
         physics: NeverScrollableScrollPhysics(),
         children: [
-          HomePage(),
-          ProfilPage(),
+          HomePage(), //0
+          // ChatPage(),
+          ProfilePage(), //1
         ],
       ),
     );
@@ -46,29 +47,26 @@ class _MainPageState extends State<MainPage> {
     return Container(
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
-          offset: Offset(0, 4),
-          blurRadius: 20,
-          color: Colors.black.withOpacity(0.06),
-        ),
+            offset: Offset(0, 4),
+            blurRadius: 20,
+            color: Colors.black.withOpacity(0.06))
       ]),
       child: BottomAppBar(
-        color: Colors.white,
-        child: Container(
-          height: 60,
-          child: Row(
-            children: [
+          color: Colors.white,
+          child: Container(
+            height: 60,
+            child: Row(children: [
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 8.0),
                   child: Material(
                     child: InkWell(
                       onTap: () {
                         index = 0;
-                        _pc.animateToPage(
-                          index,
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.bounceInOut,
-                        );
+                        _pc.animateToPage(index,
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.bounceInOut);
+
                         setState(() {});
                       },
                       child: Column(
@@ -76,6 +74,7 @@ class _MainPageState extends State<MainPage> {
                           Image.asset(
                             R.assets.icHome,
                             height: 20,
+                            color: index == 0 ? null : Colors.grey,
                           ),
                           Text("Home"),
                         ],
@@ -86,15 +85,16 @@ class _MainPageState extends State<MainPage> {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 8.0),
                   child: Material(
                     child: InkWell(
                       child: Column(
                         children: [
                           Opacity(
                             opacity: 0,
-                            child: Icon(
-                              Icons.verified_user_sharp,
+                            child: Image.asset(
+                              R.assets.icHome,
+                              height: 20,
                             ),
                           ),
                           Text("Diskusi"),
@@ -106,34 +106,36 @@ class _MainPageState extends State<MainPage> {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 8.0),
                   child: Material(
                     child: InkWell(
                       onTap: () {
+                        print("profile");
                         index = 1;
                         _pc.animateToPage(
                           index,
                           duration: Duration(milliseconds: 500),
-                          curve: Curves.bounceInOut,
+                          curve: Curves.easeInOut,
                         );
+
                         setState(() {});
                       },
                       child: Column(
                         children: [
-                          Icon(
-                            Icons.person,
+                          Image.asset(
+                            "assets/ic_profile.png",
+                            height: 20,
+                            color: index == 1 ? null : Colors.grey,
                           ),
-                          Text("Profil"),
+                          Text("Profile"),
                         ],
                       ),
                     ),
                   ),
                 ),
               ),
-            ],
-          ),
-        ),
-      ),
+            ]),
+          )),
     );
   }
 }
